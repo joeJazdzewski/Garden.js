@@ -32,9 +32,11 @@ export class Pot<T> {
   }
 
   private set value(value: Potted<T>) {
-    this.value = value;
-    clearTimeout(this.timeoutId!);
-    this.timeoutId = null;
+    this._value = value;
+    if (this.timeoutId) {
+      clearTimeout(this.timeoutId);
+      this.timeoutId = null;
+    }
   }
 
   get value(): Potted<T> {

@@ -1,4 +1,5 @@
 import { Pot } from "../pot/pot.js"
+import type { Potted } from "../pot/pot.js";
 
 export class Nursery {
 
@@ -12,5 +13,9 @@ export class Nursery {
 
   get isComplete() {
     return this._pots.every((pot) => pot.value.status === "fulfilled");
+  }
+
+  get toPromise(): Promise<Potted<unknown>[]> {
+    return Promise.all(this._pots.map((pot) => pot.wait()));
   }
 }

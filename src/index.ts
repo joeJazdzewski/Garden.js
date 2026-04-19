@@ -5,7 +5,7 @@
  */
 
 // Export your library's public API here
-export { Greenhouse } from "./packages/greenhouse/greenhouse.js";
-export { Nursery } from "./packages/nursery/nursery.js";
-export { Pot } from "./packages/pot/pot.js";
+export { Greenhouse } from "./packages/v1/greenhouse/greenhouse.js";
+export { Nursery } from "./packages/v1/nursery/nursery.js";
+export { Pot } from "./packages/v1/pot/pot.js";
 

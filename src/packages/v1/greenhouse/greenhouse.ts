@@ -1,7 +1,7 @@
 import { Nursery } from "../nursery/nursery.js";
-import type { Logger } from "../logger.type.js";
+import type { Logger } from "../../types/logger.type.js";
+import type { Uuid } from "../../types/general.type.js";
 
-type Uuid = `${string}-${string}-${string}-${string}-${string}`;
 
 export class Greenhouse {
   private _nurseries: Map<Uuid, Nursery> = new Map<Uuid, Nursery>();

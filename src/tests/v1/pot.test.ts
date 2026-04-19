@@ -1,4 +1,4 @@
-import { Pot } from '../packages/pot/pot.js';
+import { Pot } from '../../packages/v1/pot/pot.js';
 
 const logger = {
   info: () => {},

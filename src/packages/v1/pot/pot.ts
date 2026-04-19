@@ -1,18 +1,5 @@
-import type { Logger } from "../logger.type.js"
-
-type PotInProgress = {
-  status: "in progress"
-}
-
-type PottTimedOut = {
-  status: "timed out"
-}
-
-type PotDumped = {
-  status: "dumped"
-}
-
-export type Potted<T> = PromiseSettledResult<T> | PotInProgress | PottTimedOut | PotDumped
+import type { Logger } from "../../types/logger.type.js"
+import type { Potted } from "../../types/general.type.js"
 
 export class Pot<T> {
 

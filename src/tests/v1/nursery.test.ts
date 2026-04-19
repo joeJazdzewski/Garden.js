@@ -1,5 +1,5 @@
-import { Nursery } from '../packages/nursery/nursery.js';
-import type { Logger } from '../packages/logger.type.js';
+import { Nursery } from '../../packages/v1/nursery/nursery.js';
+import type { Logger } from '../../packages/types/logger.type.js';
 
 const logger: Logger = {
   info: () => {},

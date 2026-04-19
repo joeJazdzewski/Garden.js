@@ -1,6 +1,6 @@
-import type { Logger } from "../logger.type.js";
+import type { Logger } from "../../types/logger.type.js";
+import type { Potted } from "../../types/general.type.js";
 import { Pot } from "../pot/pot.js"
-import type { Potted } from "../pot/pot.js";
 
 export class Nursery {
 

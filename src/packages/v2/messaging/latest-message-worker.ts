@@ -1,17 +1,6 @@
 import type { Message } from "./latest-message.worker.js";
 import { Deferred } from "../utils/Deferred.js"
-
-interface ILoadable {
-  load(): Promise<void>;
-}
-
-interface IShutdownable {
-  shutdown(): void;
-}
-
-interface IReadyable {
-  isReady(): boolean;
-}
+import type { ILoadable, IShutdownable, IReadyable } from "../types.js"
 
 type Undefinable<T> = T | undefined;
 

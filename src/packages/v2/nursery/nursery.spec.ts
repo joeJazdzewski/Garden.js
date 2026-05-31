@@ -27,7 +27,7 @@ function createMockMessaging(): LatestMessageWorker {
     send: <T>(message: Message<T>) => {
       listeners.get(message.kind)?.forEach((callback) => callback(message.payload));
     },
-  } as LatestMessageWorker;
+  } as unknown as LatestMessageWorker;
 }
 
 describe('Nursery', () => {

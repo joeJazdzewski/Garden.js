@@ -1,10 +1,10 @@
 import { Nursery } from "../nursery/nursery.js";
 import type { Logger } from "../../types/logger.type.js";
-import type { Uuid } from "../../types/general.type.js";
+import type { UUID } from "../../types/general.type.js";
 
 
 export class Greenhouse {
-  private _nurseries: Map<Uuid, Nursery> = new Map<Uuid, Nursery>();
+  private _nurseries: Map<UUID, Nursery> = new Map<UUID, Nursery>();
 
   constructor(private logger?: Logger) {}
 
@@ -21,7 +21,7 @@ export class Greenhouse {
     return nursery;
   }
 
-  public closeNursery(id: Uuid): void {
+  public closeNursery(id: UUID): void {
     const nursery = this._nurseries.get(id);
     nursery?.close();
   }
@@ -29,14 +29,14 @@ export class Greenhouse {
   public async toPromise(): Promise<void> {
     const promises = this.nurseries.map(nursery => nursery.toPromise);
     await Promise.all(promises);
-    this._nurseries = new Map<Uuid, Nursery>();
+    this._nurseries = new Map<UUID, Nursery>();
   }
 
   public get nurseries(): Nursery[] {
     return [...this._nurseries.values()];
   }
 
-  public getNursery(id: Uuid): Nursery | undefined {
+  public getNursery(id: UUID): Nursery | undefined {
     return this._nurseries.get(id);
   }
 }

@@ -1,4 +1,4 @@
-export type Uuid = `${string}-${string}-${string}-${string}-${string}`;
+export type UUID = `${string}-${string}-${string}-${string}-${string}`;
 
 type PotInProgress = {
   status: "in progress"
